@@ -47,7 +47,7 @@ Used:
 ### 2) Initial cleaning / column dropping
 Dropped columns that are either pure identifiers or not useful for modeling in this stage:
 
-3) Feature engineering
+###3) Feature engineering
 
 Created extra behavioral/time-based signals (done before modeling):
 
@@ -59,7 +59,7 @@ age
 
 These help the model learn “when fraud tends to happen” and “who/what profile is riskier”.
 
-4) High-cardinality check
+###4) High-cardinality check
 
 Checked unique values per column to identify where one-hot encoding would explode:
 
@@ -72,3 +72,16 @@ unix_time, merch_lat, merch_long etc. (very high)
 
 ```python
 to_drop_cols = ['Unnamed: 0','first','last','street','trans_date_trans_time','dob']
+
+###6) Correlation analysis + dropping location-heavy columns
+
+After encoding + preprocessing, computed correlation matrix and then dropped:
+lat, long, merch_lat, merch_long
+zip
+Reason (practical ML reason):
+
+geo columns can introduce near-duplicate location signals
+
+can behave like a shortcut / leakage-ish feature depending on how the dataset is constructed
+
+also reduces noise + improves generalization
