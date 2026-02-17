@@ -163,11 +163,16 @@ Credit_Fraud.ipynb
 
 ## Repository Structure:
 Credit-Card-Fraud-Analysis/
+
 │
+
 ├── data/
+
 │   └── dataset files
+
 │
 ├── Credit_Fraud.ipynb
+
 └── README.md
 
 ## Learning Outcomes
