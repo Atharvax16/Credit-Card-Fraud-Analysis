@@ -1,98 +1,126 @@
-Credit Card Fraud Detection (End-to-End ML Project)
-📌 Overview
+# 💳 Credit Card Fraud Detection
 
-This project focuses on detecting fraudulent credit card transactions using machine learning and deep learning techniques. It covers the complete pipeline from data analysis and preprocessing to model building, evaluation, optimization, and interpretability.
+## 📌 Project Overview
+This project builds a fraud detection system using machine learning and deep learning techniques to identify fraudulent credit card transactions.
 
-The goal is to build highly accurate models that can effectively identify fraud while handling severe class imbalance, which is a key challenge in fraud detection.
+Fraud detection is a highly imbalanced classification problem. This project handles it using preprocessing, sampling techniques, model tuning, and explainability tools.
 
-📂 Dataset
-Dataset used: Credit Card Fraud Detection Dataset
-Contains anonymized transaction features (V1–V28), Time, Amount, and target variable Class
-0 → Legitimate transaction
-1 → Fraudulent transaction
-⚙️ Project Workflow
-1. 📊 Exploratory Data Analysis (EDA)
-Checked missing values and data distribution
-Visualized class imbalance (fraud vs legit)
-Distribution analysis of:
-Transaction amounts
-Time-based patterns
-Correlation analysis with fraud class
-2. 🧹 Data Preprocessing
-Feature engineering:
-Converted Time → Hour
-Feature selection:
-Correlation-based selection
-Mutual Information
-Train-test split with stratification
-3. ⚖️ Handling Class Imbalance
-Undersampling (RandomUnderSampler)
-Oversampling (SMOTE)
-Class-weight balancing in models
-4. 🤖 Models Implemented
-Traditional ML Models
-Logistic Regression
-Random Forest
-Gradient Boosting
-Advanced Models
-Isolation Forest (Anomaly Detection)
-Neural Network (MLP using PyTorch)
-LightGBM (with hyperparameter tuning)
-5. 🔧 Model Optimization
-Optuna Hyperparameter Tuning
-Cost-sensitive learning
-Penalizing false negatives more than false positives
-Threshold tuning for better recall/precision balance
-Probability calibration
-6. 📈 Evaluation Metrics
-Confusion Matrix
-Precision, Recall, F1-score
-ROC-AUC Score
-Precision-Recall Curve
-7. 🔍 Model Interpretability
-SHAP (SHapley Additive exPlanations):
-Feature importance
-Individual prediction explanations (waterfall plots)
-8. 📊 Final Comparison
-Compared all models side-by-side
-Visualized:
-Model performance metrics
-ROC curves
-Identified best-performing model for fraud detection
-🛠️ Tech Stack
-Languages & Libraries
-Python
-Pandas, NumPy
-Matplotlib, Seaborn
-Machine Learning
-Scikit-learn
-Imbalanced-learn (SMOTE, undersampling)
-Advanced ML / DL
-LightGBM
-PyTorch (MLP model)
-Optimization & Explainability
-Optuna
-SHAP
-🚀 How to Run
-Clone the repository:
+---
+
+## 🎯 Objectives
+- Detect fraudulent transactions with high recall
+- Minimize false negatives
+- Handle class imbalance effectively
+- Compare multiple models
+
+---
+
+## 📂 Dataset
+- Credit Card Fraud Detection Dataset
+- Features:
+  - V1–V28 (anonymized)
+  - Time, Amount
+  - Class (0 = Legit, 1 = Fraud)
+
+---
+
+## ⚙️ Workflow
+
+### 1. Exploratory Data Analysis
+- Class distribution
+- Transaction analysis
+- Correlation analysis
+
+### 2. Data Preprocessing
+- Feature engineering (Time → Hour)
+- Feature selection
+- Train-test split
+
+### 3. Handling Imbalance
+- Undersampling
+- SMOTE
+- Class weights
+
+### 4. Models
+- Logistic Regression
+- Random Forest
+- Gradient Boosting
+- Isolation Forest
+- LightGBM
+- Neural Network (MLP)
+
+### 5. Optimization
+- Optuna tuning
+- Threshold tuning
+- Cost-sensitive learning
+
+### 6. Evaluation
+- Precision, Recall, F1-score
+- ROC-AUC
+- Confusion Matrix
+
+### 7. Explainability
+- SHAP for feature importance
+
+---
+
+## 🛠️ Tech Stack
+- Python
+- Pandas, NumPy
+- Matplotlib, Seaborn
+- Scikit-learn
+- Imbalanced-learn
+- LightGBM
+- PyTorch
+- Optuna
+- SHAP
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repo:
+```bash
 git clone https://github.com/your-username/credit-card-fraud-detection.git
 cd credit-card-fraud-detection
-Install dependencies:
-pip install -r requirements.txt
-Update dataset path in notebook:
-data = pd.read_csv("path/to/creditcard.csv")
-Run the Jupyter Notebook:
-jupyter notebook
-📌 Key Insights
-Fraud detection is highly affected by class imbalance
-SMOTE + feature selection + tuned models significantly improves performance
-Cost-sensitive learning is critical in real-world applications
-Interpretability (SHAP) is essential for trust in financial systems
-📈 Future Improvements
-Deploy model using Flask / FastAPI
-Real-time fraud detection pipeline
-Try advanced deep learning models (LSTM, Autoencoders)
-Integrate streaming data (Kafka)
-👤 Author
+```
 
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Run:
+```bash
+jupyter notebook
+```
+
+---
+
+## 📁 Structure
+```
+project/
+│── data/
+│── notebooks/
+│── README.md
+│── requirements.txt
+```
+
+---
+
+## 📌 Key Points
+- Class imbalance is a major challenge
+- Recall is more important than accuracy
+- SHAP helps in model interpretability
+
+---
+
+## 🔮 Future Work
+- Model deployment (Flask/FastAPI)
+- Real-time detection
+- Deep learning improvements
+
+---
+
+## 👨‍💻 Author
 Atharva Kocharekar
