@@ -81,8 +81,8 @@ Fraud detection is a highly imbalanced classification problem. This project hand
 
 1. Clone the repo:
 ```bash
-git clone https://github.com/your-username/credit-card-fraud-detection.git
-cd credit-card-fraud-detection
+git clone https://github.com/Atharvax16/Credit-Card-Fraud-Analysis.git
+cd Credit-Card-Fraud-Analysis
 ```
 
 2. Install dependencies:
